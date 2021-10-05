@@ -71,6 +71,28 @@ paths:
           required: false
           schema:
             type: string
+        - description: from date range
+          in: query
+          name: from
+          required: false
+          example: "2021-01-01"
+          format: date
+          pattern: "YYYY-MM-DD"
+          minLength: 4
+          maxLength: 10
+          schema:
+            type: string
+        - description: to date range
+          in: query
+          name: to
+          required: false
+          example: "2021-01-01"
+          format: date
+          pattern: "YYYY-MM-DD"
+          minLength: 4
+          maxLength: 10
+          schema:
+            type: string
       responses:
         "200":
           content:
